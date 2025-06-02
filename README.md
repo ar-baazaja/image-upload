@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# 📷 Image Upload Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application that allows users to **sign up**, **log in**, **upload**, **view**, and **delete images**. All images are stored securely using **Cloudinary**, and user authentication is handled via **Firebase Auth**.
 
-## Available Scripts
+### 🌐 Live Demo
 
-In the project directory, you can run:
+👉 [Click here to visit the app](https://image-uploads-zeta.vercel.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔐 User Authentication (Email & Password)
+- 🖼 Upload images with live preview
+- 🧾 Store image metadata (URL, filename, timestamp, user ID)
+- 📂 Cloudinary integration for scalable image storage
+- 🧹 Delete uploaded images
+- 🎨 Responsive and clean dashboard UI
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+### Frontend:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React.js** (Create React App)
+- **React Router**
+- **CSS** (custom styling)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Services:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Firebase Authentication**
+- **Firestore** (for metadata)
+- **Cloudinary** (for image storage)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧰 Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/ar-baazaja/scriptxtask.git
+   cd scriptxtask
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies**
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Configure Firebase and Cloudinary**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Create a file `src/firebaseConfig.js` and add your Firebase credentials.
+   - Inside the app, make sure `CLOUDINARY_URL` and `UPLOAD_PRESET` are set for Cloudinary in `ImageUpload.js`.
 
-### Code Splitting
+4. **Run the app**
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+├── src
+│   ├── components
+│   │   ├── Login.js
+│   │   ├── Signup.js
+│   │   ├── Dashboard.js
+│   │   ├── ImageUpload.js
+│   │   └── ImageGallery.js
+│   ├── firebaseConfig.js
+│   ├── PrivateRoute.js
+│   ├── App.js
+│   └── index.js
+├── public
+├── package.json
+└── README.md
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌟 Bonus Features
 
-### Advanced Configuration
+- ✅ Live image preview before upload
+- ✅ Protected routes using `PrivateRoute.js`
+- ✅ Alerts and loading states for better UX
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📧 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you have any questions or want to collaborate:
 
-### `npm run build` fails to minify
+[GitHub](https://github.com/ar-baazaja)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
